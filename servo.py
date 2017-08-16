@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
@@ -32,7 +33,10 @@ class Servo(object):
 
     def get_operating_angle(self):
         return self.operating_angle
-
+    
+    def STOP(self):
+        self.pwmpin.ChangeDutyCycle(0)
+        
     def degree_to_cycle(self, degrees):
         return self.PRMin + degrees * ((self.PRMax - self.PRMin) / self.operating_angle)
 
