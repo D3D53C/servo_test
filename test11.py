@@ -1,8 +1,8 @@
 from servo import Servo as Servo1
 import time
 
-PIN1 = 00
-PIN2 = 00
+PIN1 = 1
+PIN2 = 2
 
 servo1 = Servo1(PIN,50,2500,12000,180)
 servo2 = Servo2(PIN,50,2500,12000,180)
