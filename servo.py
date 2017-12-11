@@ -6,7 +6,7 @@
 
 __author__ = "Raphael Kreft & Marc Steinebrunner"
 __copyright__ = ""
-__version__ = "Development v0.02"
+__version__ = "Development v0.03"
 __email__ = "raphaelkreft@gmx.de & marc.steinebrunner@gmail.com"
 __status__ = "Dev"
 
@@ -14,11 +14,11 @@ import RPi.GPIO as gpio
 
 class Servo(object):
     def __init__(self,pin):
-       self.__init__(self,pin,50,500,2500,180)
+        self.__init__(self,pin,50,500,2500,180)
     def __init__(self,pin,frequenz):
         self.init(self,pin,frequenz,500,2500,180)
     def __init__(self,pin,operation_angel):
-        sefl.__init__(self,pin,50,500,2500,180)
+        self.__init__(self,pin,50,500,2500,180)
     def __init__(self, pin, frequenz, PulseRangeMinInUS, PulseRangeMaxInUS, operating_angle):
         gpio.setmode(gpio.BOARD)
         gpio.setup(pin ,gpio.OUT)
@@ -50,4 +50,5 @@ class Servo(object):
         self.pwmpin.ChangeFrequency(frequenz)
 
     def change_position(self, degrees):
-        self.pwmpin.ChangeDutyCycle(self.degree_to_cycle(degrees))
+        for localDegrees in range(0, degrees)
+            self.pwmpin.ChangeDutyCycle(self.degree_to_cycle(localDegrees))
