@@ -13,6 +13,12 @@ __status__ = "Dev"
 import RPi.GPIO as gpio
 
 class Servo(object):
+    def __init__(self,pin):
+       self.__init__(self,pin,50,500,2500,180)
+    def __init__(self,pin,frequenz):
+        self.init(self,pin,frequenz,500,2500,180)
+    def __init__(self,pin,operation_angel):
+        sefl.__init__(self,pin,50,500,2500,180)
     def __init__(self, pin, frequenz, PulseRangeMinInUS, PulseRangeMaxInUS, operating_angle):
         gpio.setmode(gpio.BOARD)
         gpio.setup(pin ,gpio.OUT)
